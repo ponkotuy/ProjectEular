@@ -7,12 +7,11 @@ import scalax.file.Path
  */
 object Prob67 extends App {
   val triangle = ReverseTriangle.fromFile(Path("resources/triangle.txt", '/'))
-  def f(lower: Array[Int], upper: Array[Int]): Array[Int] = {
+  val maximum = triangle.rawSeq.reverse.reduce { (lower, upper) =>
     upper.zipWithIndex.map { case (x, i) =>
       math.max(lower(i), lower(i + 1)) + x
     }
   }
-  val maximum = triangle.rawSeq.reverse.reduce(f)
   println(maximum.head)
 }
 
