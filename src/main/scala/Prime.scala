@@ -16,7 +16,7 @@ object Prime {
 
   def primes(max: Int) = {
     val noPrime = this.noPrime(max)
-      (2 to max).filter(!noPrime(_))
+    (2 to max).filter(!noPrime(_))
   }
 
   def bitset(max: Int): BitSet = {
