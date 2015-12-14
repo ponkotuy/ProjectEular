@@ -1,7 +1,5 @@
 
-class Factorization(max: Int) {
-  val primes = Prime.primes(max)
-
+class Factorization() {
   def apply(x: Int): List[Int] = {
     def f(rest: Int, now: Int): List[Int] = {
       if(rest == 1) return Nil

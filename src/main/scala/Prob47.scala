@@ -1,6 +1,6 @@
 
 object Prob47 {
-  val pFact = new Factorization(100000)
+  val pFact = new Factorization()
 
   def isConsecutive(n: Int): Int = pFact(n).distinct.length
 
